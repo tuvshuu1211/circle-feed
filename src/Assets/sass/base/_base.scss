@@ -1,4 +1,10 @@
 body{
     font-family: 'Circular Std';
+
+    //background style
     background: $gray-900;
+    background-image: url($login-bg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
 }
