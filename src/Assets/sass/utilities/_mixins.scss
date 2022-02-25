@@ -1,0 +1,30 @@
+// BEM selectors
+
+@mixin element($element){
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin modifier($modifier){
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+// Flex
+
+@mixin flexy(
+    $display: flex, 
+    $wrap: null, 
+    $justify: null,
+    $align: null,
+    $direction: null
+    ){
+        display: $display;
+        flex-wrap: $wrap;
+        align-items: $align;
+        justify-content: $justify;
+        direction: $direction;
+        @content;
+    }

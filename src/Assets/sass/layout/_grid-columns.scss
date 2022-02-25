@@ -1,0 +1,29 @@
+
+// =====================================
+// Grid Columns
+// =====================================
+
+// Calculate grid columns
+
+.row{
+    @include flexy($wrap: wrap);
+    > * {
+        &:last-child{
+            padding-right: 0;
+        }
+        &:first-child{
+            padding-left: 0;
+        }
+    }
+}
+
+@for $i from 1 through  $g-col-count {
+
+    $context: g-context($g-col-width, $g-col-count, $g-gutter-width);
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 2));
+
+    .col-#{$i}{
+        width: percentage($target / $context);
+        padding: 0 $g-gutter-width
+    }
+}

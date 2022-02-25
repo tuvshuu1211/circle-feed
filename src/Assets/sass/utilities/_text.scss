@@ -1,0 +1,35 @@
+.text{
+    &-center{
+        text-align: center;
+    }
+    &-start{
+        text-align: left;
+    }
+    &-end{
+        text-align: right;
+    }
+    &-success{
+        color: $success;
+    }
+    &-muted{
+        color: $gray-500
+    }
+}
+
+.fw{
+    &-black{
+        font-weight: 800;
+    }
+    &-bold{
+        font-weight: 700;
+    }
+    &-normal{
+        font-weight: 500;
+    }
+    &-light{
+        font-weight: 300;
+    }
+    &-thin{
+        font-weight: 100;
+    }
+}

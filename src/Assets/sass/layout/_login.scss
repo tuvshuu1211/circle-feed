@@ -1,0 +1,10 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    @include flexy($justify: center, $align: center);
+
+    @include element(brand){
+        text-align: center;
+    }
+
+}

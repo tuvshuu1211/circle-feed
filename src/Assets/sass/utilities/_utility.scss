@@ -1,0 +1,100 @@
+
+// =====================================
+// Utilities
+// =====================================
+
+// Calculate Spacing Sizes
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+      @if $space == auto{
+          @if $side == 'x'{
+            .m-#{str-slice($side, 0, 1)}-#{$space} {
+                margin-left: #{$space} !important;
+                margin-right: #{$space} !important;
+              }
+            .p-#{str-slice($side, 0, 1)}-#{$space} {
+                padding-left: #{$space} !important;
+                padding-right: #{$space} !important;
+              }
+          }
+          @else if $side == 'y'{
+              .m-#{str-slice($side, 0, 1)}-#{$space} {
+                  margin-top: #{$space} !important;
+                  margin-bottom: #{$space} !important;
+                }
+              .p-#{str-slice($side, 0, 1)}-#{$space} {
+                  padding-top: #{$space} !important;
+                  padding-bottom: #{$space} !important;
+                }
+            }
+          @else{
+              .m-#{str-slice($side, 0, 1)}-#{$space} {
+                  margin-#{$side}: #{$space} !important;
+                }
+              .p-#{str-slice($side, 0, 1)}-#{$space} {
+                padding-#{$side}: #{$space} !important;
+              }
+          }
+      }@else{
+        @if $side == 'x'{
+            .m-#{str-slice($side, 0, 1)}-#{$space} {
+                margin-left: #{$space * 0.1}rem !important;
+                margin-right: #{$space * 0.1}rem !important;
+              }
+            .p-#{str-slice($side, 0, 1)}-#{$space} {
+                padding-left: #{$space * 0.1}rem !important;
+                padding-right: #{$space * 0.1}rem !important;
+              }
+          }
+          @else if $side == 'y'{
+            .m-#{str-slice($side, 0, 1)}-#{$space} {
+                margin-top: #{$space * 0.1}rem !important;
+                margin-bottom: #{$space * 0.1}rem !important;
+              }
+            .p-#{str-slice($side, 0, 1)}-#{$space} {
+                padding-top: #{$space * 0.1}rem !important;
+                padding-bottom: #{$space * 0.1}rem !important;
+              }
+          }
+          @else{
+              .m-#{str-slice($side, 0, 1)}-#{$space} {
+                  margin-#{$side}: #{$space * 0.1}rem !important;
+                }
+                .p-#{str-slice($side, 0, 1)}-#{$space} {
+                  padding-#{$side}: #{$space * 0.1}rem !important;
+                }
+          }
+      }
+      
+    }
+    @if $space == auto {
+      .m-#{$space} {
+        margin: #{$space} !important;
+      }
+      .p-#{$space} {
+        padding: #{$space} !important;
+      }
+    } @else{
+      .m-#{$space} {
+        margin: #{$space * 0.1}rem !important;
+      }
+      .p-#{$space} {
+        padding: #{$space * 0.1}rem !important;
+      }
+    }
+}
+
+// Calculate Border Radius
+
+@each $size in $radius{
+  .b-radius-#{$size}{
+    border-radius: #{$size * .5}rem
+  }
+}
+
+// Box Shadow
+
+.bx-shadow-md{
+  box-shadow: 0px 2px 44px rgba(0, 0, 0, 0.45)
+}

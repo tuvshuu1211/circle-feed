@@ -1,0 +1,30 @@
+//==========================
+// Partial Imports
+//==========================
+
+// Utilities
+@import 'utilities/variable',
+        'utilities/border',
+        'utilities/mixins',
+        'utilities/functions',
+        'utilities/utility',
+        'utilities/text',
+        'utilities/config';
+
+// Font family
+@import 'base/font';
+
+// Base Styles
+@import 'base/reset',
+        'base/base',
+        'base/font';
+ 
+// Layout Styles
+@import 'layout/container',
+        'layout/login',
+        'layout/card',
+        'layout/grid-columns';
+
+// Component Styles
+@import 'components/button',
+        'components/form'

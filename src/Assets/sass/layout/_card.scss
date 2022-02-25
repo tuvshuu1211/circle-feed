@@ -1,0 +1,9 @@
+//Card Styling
+
+.card{
+    background: $warm;
+
+    @include element(body-content){
+        @extend .m-y-40
+    }
+}
