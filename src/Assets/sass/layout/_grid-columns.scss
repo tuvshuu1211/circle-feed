@@ -27,3 +27,10 @@
         padding: 0 $g-gutter-width
     }
 }
+
+[class*='col-']{
+    @media(max-width: $break-xs){
+        width: 100%;
+        padding: $g-gutter-width 0;
+    }
+}

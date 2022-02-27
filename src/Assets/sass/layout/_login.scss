@@ -7,4 +7,20 @@
         text-align: center;
     }
 
+    @include element(card){
+        width: calc(100% / 1);
+        padding: 0 $g-gutter-width;
+        @media(min-width: $break-md){
+            width: calc(100% / 1.25);
+        }
+        @media(min-width: $break-lg){
+            width: calc(100% / 1.5);
+        }
+        @media(min-width: $break-xl){
+            width: calc(100% / 1.75);
+        }
+        @media(min-width: $break-xxl){
+            width: calc(100% / 2);
+        }
+    }
 }

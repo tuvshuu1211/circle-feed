@@ -8,9 +8,9 @@ function App() {
       
       <div className="container">
         <div className="login">
-        <div className="col-6 m-x-auto">
+        <div className="login__card m-x-auto">
           <div className="card bx-shadow-md b-radius-3">
-            <div className="card-body text-center p-y-60 p-x-50">
+            <div className="card__body text-center">
               <div className="login__brand m-b-40">
                 <Logo/>
               </div>

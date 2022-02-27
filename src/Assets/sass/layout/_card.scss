@@ -3,6 +3,14 @@
 .card{
     background: $warm;
 
+    @include element(body){
+        @extend .p-y-60, .p-x-50;
+
+        @media(max-width: $break-xs){
+            padding: 60px 40px !important;
+        }
+    }
+
     @include element(body-content){
         @extend .m-y-40
     }
